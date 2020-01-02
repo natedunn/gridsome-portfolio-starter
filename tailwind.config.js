@@ -89,7 +89,29 @@ module.exports = {
   variants: {
     // Some useful comment
   },
+  corePlugins: {
+    container: false
+  },
   plugins: [
-    // Some useful comment
-  ]
+    function ({ addComponents }) {
+      addComponents({
+        '.container': {
+          maxWidth: '100%',
+          '@apply px-12': {},
+          '@screen sm': {
+            maxWidth: '600px',
+          },
+          '@screen md': {
+            maxWidth: '700px',
+          },
+          '@screen lg': {
+            maxWidth: '800px',
+          },
+          '@screen xl': {
+            maxWidth: '900px',
+          },
+        }
+      })
+    }
+  ],
 }
