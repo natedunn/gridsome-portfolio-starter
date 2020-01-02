@@ -3,14 +3,11 @@
     class="content-wrapper bg-background-primary font-sans text-copy-primary leading-normal flex flex-col min-h-screen"
     :class="theme"
   >
-    <header class="border-t-14 border-green-700">
+    <header class="border-t-14 border-gray-800">
       <nav class="container mx-auto flex flex-wrap justify-between items-center py-8">
         <div>
-          <g-link v-if="theme === 'theme-light'" to="/">
-            <g-image src="../../static/logo.svg" class="w-40" alt="logo" />
-          </g-link>
-          <g-link v-else to="/">
-            <g-image src="../../static/logo_dark_mode.svg" class="w-40" alt="logo" />
+          <g-link to="/">
+            <span class="text-3xl">⟁</span>
           </g-link>
         </div>
         <div class="block lg:hidden">
@@ -32,34 +29,16 @@
           :class="isOpen ? 'block': 'hidden'"
         >
           <li class="mr-8 mb-6 lg:mb-0">
-            <search-input />
+            <search-input v-if="$route.path === '/blog'" />
           </li>
           <li class="mr-8 mb-6 lg:mb-0">
             <theme-switcher :theme="theme" @themeChanged="updateTheme" />
           </li>
           <li class="mr-8 mb-6 lg:mb-0">
-            <a
-              v-if="$route.path === '/'"
-              href="/#projects"
-              v-scroll-to="'#projects'"
-              class="text-copy-primary hover:text-gray-600"
-            >Projects</a>
-            <g-link v-else to="/#projects" class="text-copy-primary hover:text-gray-600">Projects</g-link>
-          </li>
-          <li class="mr-8 mb-6 lg:mb-0">
             <g-link to="/about" class="text-copy-primary hover:text-gray-600">About</g-link>
           </li>
           <li class="mr-8 mb-6 lg:mb-0">
-            <a
-              v-if="$route.path === '/'"
-              href="/#contact"
-              v-scroll-to="'#contact'"
-              class="text-copy-primary hover:text-gray-600"
-            >Contact</a>
-            <g-link v-else to="/#contact" class="text-copy-primary hover:text-gray-600">Contact</g-link>
-          </li>
-          <li class="mr-8 mb-6 lg:mb-0">
-            <g-link to="/docs" class="text-copy-primary hover:text-gray-600">Docs</g-link>
+            <g-link to="/tag/project/" class="text-copy-primary hover:text-gray-600">Projects</g-link>
           </li>
           <li>
             <g-link to="/blog" class="text-copy-primary hover:text-gray-600">Blog</g-link>
