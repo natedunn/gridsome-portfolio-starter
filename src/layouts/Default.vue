@@ -29,7 +29,7 @@
           :class="isOpen ? 'block': 'hidden'"
         >
           <li class="mr-8 mb-6 lg:mb-0">
-            <search-input v-if="$route.path === '/blog'" />
+            <search-input v-if="$route.path === '/blog' || $route.path === '/tag'" />
           </li>
           <li class="mr-8 mb-6 lg:mb-0">
             <theme-switcher :theme="theme" @themeChanged="updateTheme" />
@@ -38,7 +38,7 @@
             <g-link to="/about" class="text-copy-primary hover:text-gray-600">About</g-link>
           </li>
           <li class="mr-8 mb-6 lg:mb-0">
-            <g-link to="/tag/project/" class="text-copy-primary hover:text-gray-600">Projects</g-link>
+            <g-link to="/projects/" class="text-copy-primary hover:text-gray-600">Projects</g-link>
           </li>
           <li>
             <g-link to="/blog" class="text-copy-primary hover:text-gray-600">Blog</g-link>
@@ -152,8 +152,8 @@
 </static-query>
 
 <script>
-import SearchInput from '../components/SearchInput'
-import ThemeSwitcher from '../components/ThemeSwitcher'
+import SearchInput from '@/components/SearchInput'
+import ThemeSwitcher from '@/components/ThemeSwitcher'
 
 export default {
   components: {
