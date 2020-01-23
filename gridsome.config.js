@@ -6,16 +6,18 @@
 
 const tailwind = require('tailwindcss')
 const purgecss = require('@fullhuman/postcss-purgecss')
+const postcssPresetEnv = require('postcss-preset-env')
 
 const postcssPlugins = [
   tailwind(),
+  postcssPresetEnv({ stage: 0, }),
 ]
 
 if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
 
 module.exports = {
   siteName: 'Nate Dunn (@natedunn)',
-  siteDescription: 'Web developer from Mexico City',
+  siteDescription: 'Front-end web developer & designer',
   siteUrl: 'https://personal-site-gridsome.netlify.com',
   plugins: [
     {
