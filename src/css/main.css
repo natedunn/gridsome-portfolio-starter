@@ -1,12 +1,11 @@
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
 
+/* Light theme */
 .theme-light {
   --bg-background-primary: whitesmoke;
-  --bg-background-secondary: #f7fafc;
+  --bg-background-secondary: theme("colors.gray.00");
   --bg-background-tertiary: #e2e8f0;
 
   --bg-background-form: white;
@@ -15,31 +14,22 @@
   --text-copy-secondary: #4a5568;
 
   --border-border-color-primary: white;
+
+  & .search-highlighted,
+  & .search-hover:hover {
+    background: #f0fff4;
+  }
+  & .markdown-body {
+    color: #24292e;
+  }
 }
 
-.theme-light .search-highlighted {
-  background: #f0fff4;
-}
-
-.theme-light .search-hover:hover {
-  background: #f0fff4;
-}
-
-.theme-dark .markdown-body {
-  color: #24292e;
-}
-
-.theme-dark .search-highlighted {
-  background: #2d3748;
-}
-
-.theme-dark .search-hover:hover {
-  background: #2d3748;
-}
-
+/* Dark Theme */
 .theme-dark {
+  --color-primary: theme("colors.gray.600");
+  --color-primary-hover: theme("colors.gray.600");
   --bg-background-primary: #1d1d1d;
-  --bg-background-secondary: #102c44;
+  --bg-background-secondary: red;
   --bg-background-tertiary: #1e3951;
 
   --bg-background-form: #1a202c;
@@ -48,50 +38,31 @@
   --text-copy-secondary: #e2e8f0;
 
   --border-border-color-primary: #1a202c;
+
+  & .search-highlighted,
+  & .search-hover:hover {
+    background: #2d3748;
+  }
+  & .markdown-body {
+    color: #cbd5e0;
+  }
 }
 
-.theme-dark .markdown-body {
-  color: #cbd5e0;
-}
-
+/* Global */
 .content-wrapper {
   transition: background-color 0.25s;
 }
 
 a {
-  @apply text-green-700 font-bold;
+  color: blue;
 }
-
 a:hover {
-  @apply text-green-800;
+  color: darkBlue;
 }
 
 nav .active {
   font-weight: bold;
   @apply border-black border-b;
-}
-
-.container-inner {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-@media (min-width: 640px) {
-  .container-inner {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container-inner {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container-inner {
-    max-width: 800px;
-  }
 }
 
 .checkmark {
