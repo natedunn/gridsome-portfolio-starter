@@ -50,7 +50,7 @@
     <div class="flex-grow">
       <slot />
     </div>
-    <footer class="bg-green-700 text-white">
+    <footer class="bg-background-secondary text-white">
       <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between py-8">
         <div class="mb-8 lg:mb-0">
           <div>Copyright 2019. All rights reserved.</div>

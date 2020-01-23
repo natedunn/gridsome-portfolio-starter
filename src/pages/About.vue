@@ -3,7 +3,7 @@
     <div class="container mx-auto">
       <g-image src="@/images/me-wide.jpg" class="w-full" />
       <div class="h-12"></div>
-      <h1 class="text-4xl font-bold tracking-wide">About</h1>
+      <h1 class="text-4xl font-bold font-mono">More about me</h1>
       <div class="h-6"></div>
       <section>
         <p>

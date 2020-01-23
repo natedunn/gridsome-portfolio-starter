@@ -13,6 +13,9 @@
           <li>
             <Link href="https://radlist.io">Rad</Link>
           </li>
+          <li>
+            <Link href="https://natedunn.net">This site</Link>
+          </li>
         </ul>
       </section>
     </div>
