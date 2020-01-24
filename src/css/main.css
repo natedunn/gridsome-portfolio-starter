@@ -11,6 +11,9 @@
   --color-link: blue;
   --color-link-hover: midnightblue;
 
+  --color-scrollbar: #1d1d1d;
+  --color-scrollbar-bg: whitesmoke;
+
   --bg-background-form: white;
 
   --text-copy-primary: #2d3748;
@@ -37,6 +40,9 @@
   --color-link: dodgerblue;
   --color-link-hover: lightBlue;
 
+  --color-scrollbar: whitesmoke;
+  --color-scrollbar-bg: var(--bg-background-primary);
+
   --bg-background-form: #1a202c;
 
   --text-copy-primary: #cbd5e0;
@@ -54,7 +60,30 @@
 }
 
 /* Global */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 20px;
+}
+html,
+body {
+  scrollbar-width: 20px;
+  scrollbar-color: var(--color-scrollbar) var(--color-scrollbar-bg);
+}
+body {
+  background-color: var(--bg-background-primary);
+  transition: background-color 0.25s;
+}
+body::-webkit-scrollbar-track {
+  background: var(--color-scrollbar-bg);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-scrollbar);
+  border-radius: 10px;
+  border: 5px solid var(--color-scrollbar-bg);
+}
+
 .content-wrapper {
+  width: calc(100vw - 20px);
   transition: background-color 0.25s;
 }
 
@@ -65,9 +94,9 @@ a:hover {
   color: var(--color-link-hover);
 }
 
-nav .active {
-  font-weight: bold;
-  @apply border-black border-b;
+nav .active:not(.logo) {
+  border-color: var(--color-link);
+  @apply border-b-2 pb-1;
 }
 
 .checkmark {

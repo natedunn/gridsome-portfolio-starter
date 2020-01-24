@@ -1,12 +1,11 @@
 <template>
   <div
-    class="content-wrapper bg-background-primary font-sans text-copy-primary leading-normal flex flex-col min-h-screen"
-    :class="theme"
+    class="content-wrapper font-sans text-copy-primary leading-normal flex flex-col min-h-screen"
   >
     <header class="border-t-14 border-gray-800">
       <nav class="container mx-auto flex flex-wrap justify-between items-center py-8">
         <div>
-          <g-link to="/">
+          <g-link class="logo" to="/" exact>
             <span class="text-3xl">⟁</span>
           </g-link>
         </div>
@@ -25,11 +24,11 @@
           </button>
         </div>
         <ul
-          class="uppercase tracking-wide font-bold w-full block flex-grow lg:flex lg:flex-initial lg:w-auto items-center mt-8 lg:mt-0"
+          class="font-mono w-full block flex-grow lg:flex lg:flex-initial lg:w-auto items-center mt-8 lg:mt-0"
           :class="isOpen ? 'block': 'hidden'"
         >
           <li class="mr-8 mb-6 lg:mb-0">
-            <search-input v-if="$route.path === '/blog' || $route.path === '/tag'" />
+            <search-input v-if="$route.path === '/blog' || $route.path.match(/^\/tag\/.*$/)" />
           </li>
           <li class="mr-8 mb-6 lg:mb-0">
             <theme-switcher :theme="theme" @themeChanged="updateTheme" />
@@ -148,8 +147,12 @@ export default {
     SearchInput,
     ThemeSwitcher
   },
-  mounted() {
+  created() {
     this.theme = localStorage.getItem('theme') || 'theme-light'
+    document.documentElement.classList.add(this.theme)
+  },
+  mounted() {
+
   },
   data() {
     return {
@@ -163,6 +166,15 @@ export default {
     },
     updateTheme(theme) {
       this.theme = theme
+
+      const {documentElement} = document;
+      documentElement.classList.forEach(item => {
+        if (item.startsWith('theme-')) {
+          documentElement.classList.remove(item);
+        }
+      })
+      documentElement.classList.add(theme);
+
     }
   }
 }

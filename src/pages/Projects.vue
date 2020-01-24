@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="container mx-auto">
+    <div class="container mx-auto py-16">
       <h1>Current projects</h1>
       <section>
         <ul>
