@@ -10,11 +10,6 @@
 <script>
 export default {
   props: {
-    external: {
-      type: Boolean,
-      required: true,
-      default: false
-    },
     to: {
       type: [String, Object],
       default: null,
