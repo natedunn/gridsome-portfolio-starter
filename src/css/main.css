@@ -8,6 +8,9 @@
   --bg-background-secondary: theme("colors.gray.00");
   --bg-background-tertiary: #e2e8f0;
 
+  --color-link: blue;
+  --color-link-hover: midnightblue;
+
   --bg-background-form: white;
 
   --text-copy-primary: #2d3748;
@@ -30,7 +33,9 @@
   --color-primary-hover: theme("colors.gray.600");
   --bg-background-primary: #1d1d1d;
   --bg-background-secondary: red;
-  --bg-background-tertiary: #1e3951;
+
+  --color-link: dodgerblue;
+  --color-link-hover: lightBlue;
 
   --bg-background-form: #1a202c;
 
@@ -54,10 +59,10 @@
 }
 
 a {
-  color: blue;
+  color: var(--color-link);
 }
 a:hover {
-  color: darkBlue;
+  color: var(--color-link-hover);
 }
 
 nav .active {
