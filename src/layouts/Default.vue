@@ -147,7 +147,7 @@ export default {
     SearchInput,
     ThemeSwitcher
   },
-  created() {
+  mounted() {
     this.theme = localStorage.getItem('theme') || 'theme-light'
     document.documentElement.classList.add(this.theme)
   },
