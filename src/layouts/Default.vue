@@ -151,9 +151,6 @@ export default {
     this.theme = localStorage.getItem('theme') || 'theme-light'
     document.documentElement.classList.add(this.theme)
   },
-  mounted() {
-
-  },
   data() {
     return {
       isOpen: false,
