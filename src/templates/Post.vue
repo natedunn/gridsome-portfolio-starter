@@ -8,7 +8,7 @@
           :to="tag.path"
           v-for="tag in $page.post.tags"
           :key="tag.id"
-          class="bg-gray-300 rounded-full px-4 py-2 mr-4 hover:bg-green-300"
+          class="bg-whitesmoke hover:bg-gray-700 rounded-full px-4 py-2 mr-4"
         >{{ tag.title }}</g-link>
       </div>
       <div class="markdown-body mb-8" v-html="$page.post.content" />
@@ -20,17 +20,17 @@
 </template>
 
 <page-query>
-query Post ($path: String!) {
-  post: post (path: $path) {
-    title
-    date (format: "MMMM D, Y")
-    content
-    tags {
+  query Post($path: String!) {
+    post: post(path: $path) {
       title
-      path
+      date(format: "MMMM D, Y")
+      content
+      tags {
+        title
+        path
+      }
     }
   }
-}
 </page-query>
 
 <script>

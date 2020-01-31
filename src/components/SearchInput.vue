@@ -56,7 +56,7 @@
           >
             {{ post.item.title }}
             <span
-              class="block font-normal text-copy-primary text-sm my-1"
+              class="block font-normal text-primary text-sm my-1"
             >{{ post.item.summary }}</span>
           </a>
 

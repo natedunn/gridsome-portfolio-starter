@@ -2,19 +2,25 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: {
-          primary: 'var(--bg-background-primary)',
-          secondary: 'var(--bg-background-secondary)',
-          form: 'var(--bg-background-form)',
-        },
+        blue: 'var(--color-primary)',
+        whitesmoke: 'var(--color-whitesmoke)', // Ok
+        // background: {
+        //   primary: 'var(--bg-primary)', // Ok
+        //   secondary: 'var(--bg-secondary)', // Ok
+        //   form: 'var(--bg-background-form)',
+        // },
         copy: {
           primary: 'var(--text-copy-primary)',
           secondary: 'var(--text-copy-hover)',
         },
-        'border-color': {
-          primary: 'var(--border-border-color-primary)',
-        },
+        // 'border-color': {
+        //   primary: 'var(--border-border-color-primary)',
+        // },
       }
+    },
+    textColor: {
+      primary: 'var(--textColor-primary)',
+      secondary: 'var(--textColor-secondary)',
     }
   },
   plugins: [

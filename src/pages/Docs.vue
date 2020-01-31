@@ -7,7 +7,7 @@
         class="post border-gray-400 border-b mb-12"
       >
         <h2 class="text-3xl font-bold">
-          <g-link :to="doc.node.path" class="text-copy-primary">{{ doc.node.title }}</g-link>
+          <g-link :to="doc.node.path" class="text-primary">{{ doc.node.title }}</g-link>
         </h2>
 
         <div class="text-lg mb-4">{{ doc.node.excerpt }}</div>

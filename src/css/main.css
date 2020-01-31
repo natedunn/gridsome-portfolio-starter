@@ -2,24 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Root */
+:root {
+  --color-blue: blue;
+  --color-whitesmoke: whitesmoke;
+  --color-nero: #1d1d1d;
+  --color-gray: gray;
+}
+
 /* Light theme */
 .theme-light {
-  --bg-background-primary: whitesmoke;
-  --bg-background-secondary: theme("colors.gray.00");
-  --bg-background-tertiary: #e2e8f0;
+  /* Background */
+  --bg-primary: whitesmoke;
+  --bg-secondary: theme("colors.gray.00");
 
-  --color-link: blue;
+  /* Link */
+  --color-link: var(--color-blue);
   --color-link-hover: midnightblue;
 
-  --color-scrollbar: #1d1d1d;
-  --color-scrollbar-bg: whitesmoke;
+  /* Scrollbar */
+  --color-scrollbar: var(--color-nero);
+  --color-scrollbar-bg: var(--color-whitesmoke);
+
+  /* Text */
+  --textColor-primary: var(--color-nero);
+  --textColor-secondary: var(--color-gray);
 
   --bg-background-form: white;
 
-  --text-copy-primary: #2d3748;
-  --text-copy-secondary: #4a5568;
-
-  --border-border-color-primary: white;
+  /* --text-copy-primary: #2d3748;
+  --text-copy-secondary: #4a5568; */
 
   & .search-highlighted,
   & .search-hover:hover {
@@ -32,21 +44,25 @@
 
 /* Dark Theme */
 .theme-dark {
-  --color-primary: theme("colors.gray.600");
-  --color-primary-hover: theme("colors.gray.600");
-  --bg-background-primary: #1d1d1d;
-  --bg-background-secondary: red;
+  /* Background */
+  --bg-primary: var(--color-nero);
+  --bg-secondary: red;
 
+  /* Link */
   --color-link: dodgerblue;
   --color-link-hover: lightBlue;
 
-  --color-scrollbar: whitesmoke;
-  --color-scrollbar-bg: var(--bg-background-primary);
+  /* Scrollbar */
+  --color-scrollbar: var(--color-whitesmoke);
+  --color-scrollbar-bg: var(--bg-primary);
 
   --bg-background-form: #1a202c;
 
-  --text-copy-primary: #cbd5e0;
-  --text-copy-secondary: #e2e8f0;
+  --textColor-primary: var(--color-whitesmoke);
+  --textColor-secondary: var(--color-gray);
+
+  /* --text-copy-primary: #cbd5e0;
+  --text-copy-secondary: #e2e8f0; */
 
   --border-border-color-primary: #1a202c;
 
@@ -70,7 +86,8 @@ body {
   scrollbar-color: var(--color-scrollbar) var(--color-scrollbar-bg);
 }
 body {
-  background-color: var(--bg-background-primary);
+  background-color: var(--bg-primary);
+  color: var(--textColor);
   transition: background-color 0.25s;
 }
 body::-webkit-scrollbar-track {

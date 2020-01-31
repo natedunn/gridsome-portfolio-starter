@@ -9,9 +9,9 @@
         class="post border-gray-400 border-b mb-12"
       >
         <h2 class="text-3xl font-bold">
-          <g-link :to="post.node.path" class="text-copy-primary">{{ post.node.title }}</g-link>
+          <g-link :to="post.node.path" class="text-primary">{{ post.node.title }}</g-link>
         </h2>
-        <div class="text-copy-secondary mb-4">
+        <div class="text-secondary mb-4">
           <span>{{ post.node.date }}</span>
           <span>&middot;</span>
           <span>{{ post.node.timeToRead }} min read</span>
@@ -35,32 +35,32 @@
 </template>
 
 <page-query>
-query Tag ($id: ID!, $page: Int) {
-  tag: tag (id: $id) {
-    title
-    belongsTo (page: $page, perPage: 3) @paginate {
-      totalCount
-      pageInfo {
-        totalPages
-        currentPage
-      }
-      edges {
-        node {
-          ...on Post {
-            title
-            timeToRead
-    	      date (format: "MMMM D, YYYY")
-            path
-            summary
-            tags {
+  query Tag($id: ID!, $page: Int) {
+    tag: tag(id: $id) {
+      title
+      belongsTo(page: $page, perPage: 3) @paginate {
+        totalCount
+        pageInfo {
+          totalPages
+          currentPage
+        }
+        edges {
+          node {
+            ... on Post {
               title
+              timeToRead
+              date(format: "MMMM D, YYYY")
+              path
+              summary
+              tags {
+                title
+              }
             }
           }
         }
       }
     }
   }
-}
 </page-query>
 
 <script>

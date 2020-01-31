@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="content-wrapper font-sans text-copy-primary leading-normal flex flex-col min-h-screen"
-  >
+  <div class="content-wrapper font-sans text-primary leading-normal flex flex-col min-h-screen">
     <header class="border-t-14 border-gray-800">
       <nav class="container mx-auto flex flex-wrap justify-between items-center py-8">
         <div>
@@ -34,13 +32,13 @@
             <theme-switcher :theme="theme" @themeChanged="updateTheme" />
           </li>
           <li class="mr-8 mb-6 lg:mb-0">
-            <g-link to="/about" class="text-copy-primary hover:text-gray-600">About</g-link>
+            <g-link to="/about" class="text-primary hover:text-gray-600">About</g-link>
           </li>
           <li class="mr-8 mb-6 lg:mb-0">
-            <g-link to="/projects/" class="text-copy-primary hover:text-gray-600">Projects</g-link>
+            <g-link to="/projects/" class="text-primary hover:text-gray-600">Projects</g-link>
           </li>
           <li>
-            <g-link to="/blog" class="text-copy-primary hover:text-gray-600">Blog</g-link>
+            <g-link to="/blog" class="text-primary hover:text-gray-600">Blog</g-link>
           </li>
         </ul>
       </nav>
