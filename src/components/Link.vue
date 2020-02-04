@@ -1,5 +1,5 @@
 <template>
-  <a v-if="href || external" :href="href">
+  <a v-if="href" :href="href">
     <slot>{{ text }}</slot>
   </a>
   <g-link v-else :to="to">

@@ -3,7 +3,8 @@ title: Introduction to Gridsome
 path: /introduction-to-gridsome
 date: 2019-04-08
 summary: Gridsome is a Vue.js-powered, modern site generator for building the fastest possible websites for any Headless CMS, APIs or Markdown-files. Gridsome makes it easy and fun for developers to create fast, beautiful websites without needing to become a performance expert.
-tags: ['frontend', 'coding', 'vue']
+tags: ["frontend", "coding", "vue"]
+cover: "./images/blog_bg_1.jpg"
 ---
 
 ![background](./images/blog_bg_1.jpg)
@@ -34,8 +35,8 @@ tags: ['frontend', 'coding', 'vue']
 </template>
 ```
 
-
 ### Prerequisites
+
 You should have basic knowledge about HTML, CSS, [Vue.js](https://vuejs.org) and how to use the [Terminal](https://www.linode.com/docs/tools-reference/tools/using-the-terminal/). Knowing how [Vue Single File components](https://vuejs.org/v2/guide/single-file-components.html) & [GraphQL](https://www.graphql.com/) works is a plus, but not required. Gridsome is a great way to learn both.
 
 Gridsome requires **Node.js** and recommends **Yarn**. [How to setup](/docs/prerequisites)
@@ -61,7 +62,6 @@ Using npm:
 
 1. Create `.vue` components in the `/pages` directory to create page routes.
 2. Use `gridsome build` to generate static files in a `/dist` folder
-
 
 - [How it works](/docs/how-it-works)
 - [How Pages work](/docs/pages)

@@ -6,7 +6,7 @@
       <div class="markdown-body mb-8" v-html="$page.post.content" />
       <div class="flex mb-8 text-sm tags">
         <span class="inline-block mr-4">Filed under:</span>
-        <Link :to="tag.path" v-for="tag in $page.post.tags" :key="tag.id">{{ tag.title }}</Link>
+        <Link v-for="tag in $page.post.tags" :key="tag.id" :to="tag.path">{{ tag.title }}</Link>
       </div>
       <div class="mb-8">
         <Link to="/blog" class="font-bold uppercase">Back to Blog</Link>
@@ -19,6 +19,7 @@
   query Post($path: String!) {
     post: post(path: $path) {
       title
+      cover
       date(format: "MMMM D, Y")
       content
       tags {
@@ -33,7 +34,29 @@
 export default {
   metaInfo() {
     return {
-      title: this.$page.post.title
+      title: this.pageTitle,
+      meta: [
+        {
+          property: "og:image",
+          content: this.ogImageUrl
+        },
+        {
+          property: "og:title",
+          content: this.pageTitle
+        },
+        {
+          property: "title",
+          content: this.pageTitle
+        },
+      ],
+    }
+  },
+  computed: {
+    ogImageUrl () {
+      return this.$page.post.cover ? this.$page.post.cover.src : `${this.config.siteUrl}/images/default-cover.png`
+    },
+    pageTitle() {
+      return this.$page.post.title ? this.$page.post.title : null;
     }
   }
 }
