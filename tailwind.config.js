@@ -2,7 +2,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        blue: 'var(--color-primary)',
+        basicBlue: 'var(--color-primary)',
         whitesmoke: 'var(--color-whitesmoke)', // Ok
         // background: {
         //   primary: 'var(--bg-primary)', // Ok
@@ -16,12 +16,18 @@ module.exports = {
         // 'border-color': {
         //   primary: 'var(--border-border-color-primary)',
         // },
+      },
+      borderColor: {
+        primary: 'var(--borderColor-primary)',
+      },
+      textColor: {
+        primary: 'var(--textColor-primary)',
+        secondary: 'var(--textColor-secondary)',
+      },
+      fontFamily: {
+        'mono': '"Inconsolata", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
       }
     },
-    textColor: {
-      primary: 'var(--textColor-primary)',
-      secondary: 'var(--textColor-secondary)',
-    }
   },
   plugins: [
     function ({ addComponents }) {
