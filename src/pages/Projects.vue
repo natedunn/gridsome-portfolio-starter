@@ -1,22 +1,12 @@
 <template>
   <Layout>
     <div class="container mx-auto py-16">
-      <h1>Current projects</h1>
-      <section>
-        <ul>
-          <li>
-            <Link href="https://useproper.dev">Proper</Link>
-          </li>
-          <li>
-            <Link href="https://weirdweb.dev">Weird Web</Link>
-          </li>
-          <li>
-            <Link href="https://radlist.io">Rad</Link>
-          </li>
-          <li>
-            <Link href="https://natedunn.net">This site</Link>
-          </li>
-        </ul>
+      <h1 class="text-4xl font-bold font-mono">Current projects</h1>
+      <section class="my-8 flex flex-row flex-wrap justify-between projects">
+        <ProjectCard title="Proper" link="https://useproper.dev" />
+        <ProjectCard title="Weird Web" link="https://weirdweb.dev" />
+        <ProjectCard title="Rad" link="https://radlist.io" />
+        <ProjectCard title="Personal site" link="https://natedunn.net" />
       </section>
     </div>
   </Layout>
@@ -24,9 +14,18 @@
 
 <script>
 import Link from '@/components/Link'
+import ProjectCard from '@/components/ProjectCard'
 export default {
   components: {
-    Link
+    Link,
+    ProjectCard
   }
 }
 </script>
+
+<style lang="postcss">
+.projects > div {
+  @apply mb-6;
+  width: calc(50% - theme("spacing.4"));
+}
+</style>
