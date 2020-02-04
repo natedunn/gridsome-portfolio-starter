@@ -4,7 +4,7 @@
 
 /* Root */
 :root {
-  --color-blue: blue;
+  --color-blue: #4949ff;
   --color-whitesmoke: whitesmoke;
   --color-nero: #1d1d1d;
   --color-gray: gray;
@@ -17,7 +17,7 @@
   --bg-secondary: theme("colors.gray.00");
   /* Link */
   --color-link: var(--color-blue);
-  --color-link-hover: #6677d5;
+  --color-link-hover: #000446;
   /* Scrollbar */
   --color-scrollbar: var(--color-nero);
   --color-scrollbar-bg: var(--color-whitesmoke);

@@ -3,9 +3,9 @@
     <header class="border-t-14 border-gray-800">
       <nav class="container mx-auto flex flex-wrap justify-between items-center py-8">
         <div>
-          <g-link class="logo" to="/" exact>
+          <Link class="logo" to="/">
             <span class="text-3xl">⟁</span>
-          </g-link>
+          </Link>
         </div>
         <div class="block lg:hidden">
           <button
@@ -22,7 +22,7 @@
           </button>
         </div>
         <ul
-          class="font-mono w-full block flex-grow lg:flex lg:flex-initial lg:w-auto items-center mt-8 lg:mt-0"
+          class="w-full block flex-grow lg:flex lg:flex-initial lg:w-auto items-center mt-8 lg:mt-0 font-mono text-lg"
           :class="isOpen ? 'block': 'hidden'"
         >
           <li class="mr-8 mb-6 lg:mb-0">
@@ -32,13 +32,13 @@
             <theme-switcher :theme="theme" @themeChanged="updateTheme" />
           </li>
           <li class="mr-8 mb-6 lg:mb-0">
-            <g-link to="/about" class="text-primary hover:text-gray-600">About</g-link>
+            <Link to="/about" class>About</Link>
           </li>
           <li class="mr-8 mb-6 lg:mb-0">
-            <g-link to="/projects/" class="text-primary hover:text-gray-600">Projects</g-link>
+            <Link to="/projects/" class>Projects</Link>
           </li>
           <li>
-            <g-link to="/blog" class="text-primary hover:text-gray-600">Blog</g-link>
+            <Link to="/blog" class>Blog</Link>
           </li>
         </ul>
       </nav>
