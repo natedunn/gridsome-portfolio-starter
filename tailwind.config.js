@@ -25,7 +25,8 @@ module.exports = {
         secondary: 'var(--textColor-secondary)',
       },
       fontFamily: {
-        'mono': '"Inconsolata", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
+        'sans': 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+        'mono': '"Inconsolata", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
       }
     },
   },

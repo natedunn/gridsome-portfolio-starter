@@ -34,8 +34,19 @@ export default function (Vue, { router, head, isClient }) {
   })
 
   head.link.push({
+    rel: 'dns-prefetch',
+    href: '//fonts.googleapis.com',
+  })
+
+  head.link.push({
+    rel: 'preconnect',
+    href: 'https://fonts.gstatic.com/',
+    crossorigin: "use-credentials"
+  })
+
+  head.link.push({
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap'
+    href: 'https://fonts.googleapis.com/css?family=Inconsolata:400,700|Roboto:300,400&display=swap'
   })
 }
 
