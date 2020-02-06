@@ -93,9 +93,7 @@ export default {
   },
   computed: {
     ogImageUrl() {
-      return this.$page.post.cover
-        ? this.$page.post.cover.src
-        : `${this.config.siteUrl}/images/default-cover.png`;
+      return this.$page.post.cover ? this.$page.post.cover.src : null;
     },
     pageTitle() {
       return this.$page.post.title ? this.$page.post.title : null;
