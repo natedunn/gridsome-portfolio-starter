@@ -37,13 +37,6 @@ import moment from "moment";
 import slugify from "@sindresorhus/slugify";
 import config from "@/.temp/config";
 export default {
-  created() {
-    test: {
-      console.log(this.config.siteUrl);
-      console.log(this.$page.post.cover);
-      console.log(this.config.siteUrl + this.$page.post.cover.src);
-    }
-  },
   metaInfo() {
     return {
       title: this.pageTitle,
