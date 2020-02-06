@@ -2,7 +2,7 @@
   <Layout>
     <div class="container mx-auto my-16">
       <h1 class="text-4xl font-bold font-mono">{{ $page.post.title }}</h1>
-      <div class="text-xl text-gray-600 mb-4">{{ $page.post.date }}</div>
+      <div class="text-xl text-gray-600 mb-4">{{ dateFormat }}</div>
       <div class="markdown-body mb-8" v-html="$page.post.content" />
       <div class="flex mb-8 text-sm tags">
         <span class="inline-block mr-4">Filed under:</span>
@@ -22,7 +22,7 @@
     post: post(path: $path) {
       title
       cover
-      date(format: "MMMM D, Y")
+      date
       content
       tags {
         title
@@ -99,6 +99,9 @@ export default {
     },
     pageTitle() {
       return this.$page.post.title ? this.$page.post.title : null;
+    },
+    dateFormat() {
+      return moment(this.$page.date).format("MMMM D, Y");
     }
   }
 };
