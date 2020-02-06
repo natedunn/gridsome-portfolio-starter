@@ -35,7 +35,15 @@
 <script>
 import moment from "moment";
 import slugify from "@sindresorhus/slugify";
+import config from "@/.temp/config";
 export default {
+  created() {
+    test: {
+      console.log(this.config.siteUrl);
+      console.log(this.$page.post.cover);
+      console.log(this.config.siteUrl + this.$page.post.cover.src);
+    }
+  },
   metaInfo() {
     return {
       title: this.pageTitle,
@@ -52,7 +60,7 @@ export default {
           property: "og:description",
           content: this.description(this.$page.post)
         },
-        { property: "og:url", content: this.postUrl },
+        // { property: "og:url", content: this.postUrl },
         {
           property: "article:published_time",
           content: moment(this.$page.post.date).format("YYYY-MM-DD")
@@ -92,8 +100,13 @@ export default {
     }
   },
   computed: {
+    config() {
+      return config;
+    },
     ogImageUrl() {
-      return this.$page.post.cover ? this.$page.post.cover.src : null;
+      return this.$page.post.cover
+        ? this.config.siteUrl + this.$page.post.cover.src
+        : `${this.config.siteUrl}/images/default-cover.jpg`;
     },
     pageTitle() {
       return this.$page.post.title ? this.$page.post.title : null;
