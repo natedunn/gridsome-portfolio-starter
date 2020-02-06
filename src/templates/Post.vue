@@ -53,12 +53,13 @@ export default {
           property: "og:description",
           content: this.description(this.$page.post)
         },
-        // { property: "og:url", content: this.postUrl },
+        { property: "og:url", content: this.postUrl },
         {
           property: "article:published_time",
           content: moment(this.$page.post.date).format("YYYY-MM-DD")
         },
         { property: "og:image", content: this.ogImageUrl },
+        { name: "fb:app_id", content: "null" },
         // Twitter
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: this.$page.post.title },
@@ -100,6 +101,13 @@ export default {
       return this.$page.post.cover
         ? this.config.siteUrl + this.$page.post.cover.src
         : `${this.config.siteUrl}/images/default-cover.jpg`;
+    },
+    postUrl() {
+      let siteUrl = this.config.siteUrl;
+      let postPath = this.$page.post.path;
+      return postPath
+        ? `${siteUrl}${postPath}`
+        : `${siteUrl}/${slugify(this.$page.post.title)}/`;
     },
     pageTitle() {
       return this.$page.post.title ? this.$page.post.title : null;
