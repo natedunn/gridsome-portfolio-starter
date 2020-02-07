@@ -59,7 +59,7 @@ export default {
           content: moment(this.$page.post.date).format("YYYY-MM-DD")
         },
         { property: "og:image", content: this.ogImageUrl },
-        { name: "fb:app_id", content: "null" },
+        { property: "fb:app_id", content: "null" },
         // Twitter
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: this.$page.post.title },
