@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div class="container mx-auto py-16">
-      <h1 class="text-4xl font-bold font-mono">Current projects</h1>
+      <h1 class="text-4xl font-bold font-mono">Projects</h1>
       <section class="my-8 flex flex-row flex-wrap justify-between projects">
         <ProjectCard title="Proper" link="https://useproper.dev" />
         <ProjectCard title="Weird Web" link="https://weirdweb.dev" />
@@ -13,14 +13,17 @@
 </template>
 
 <script>
-import Link from '@/components/Link'
-import ProjectCard from '@/components/ProjectCard'
+import Link from "@/components/Link";
+import ProjectCard from "@/components/ProjectCard";
 export default {
   components: {
     Link,
     ProjectCard
+  },
+  metaInfo: {
+    title: "Projects"
   }
-}
+};
 </script>
 
 <style lang="postcss">
