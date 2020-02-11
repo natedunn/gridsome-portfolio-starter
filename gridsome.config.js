@@ -75,7 +75,8 @@ module.exports = {
     },
   ],
   templates: {
-    Tag: '/tag/:id'
+    Tag: '/tag/:id',
+    Post: '/post/:slug'
   },
   transformers: {
     remark: {
