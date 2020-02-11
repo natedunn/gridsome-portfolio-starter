@@ -4,15 +4,16 @@
       :to="previousPage"
       :underline="!showPreviousPage ? false : true"
       :class="{
-        'text-gray-400 hover:text-gray-400 cursor-not-allowed': !showPreviousPage
+        'text-disabled cursor-not-allowed is-disabled': !showPreviousPage
       }"
       >&larr; Prev</Link
     >
     <div>Page {{ currentPage }} of {{ totalPages }}</div>
     <Link
       :to="nextPage"
+      :underline="!showPreviousPage ? false : true"
       :class="{
-        'text-gray-400 hover:text-gray-400 cursor-not-allowed': !showNextPage
+        'text-disabled cursor-not-allowed is-disabled': !showNextPage
       }"
       >Next &rarr;</Link
     >

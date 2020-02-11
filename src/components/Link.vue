@@ -36,17 +36,19 @@ export default {
 </script>
 
 <style lang="postcss">
-a {
+/* base */
+a:not(.is-disabled) {
   color: var(--color-link);
+  &:hover {
+    color: var(--color-link-hover);
+  }
 }
-a.is-underlined {
+/* is-underlined */
+a:not(.is-disabled).is-underlined {
   text-decoration: underline solid var(--color-link-underline);
   text-underline-offset: var(--text-underline-offset);
-}
-a.is-underlined:hover {
-  text-decoration-color: var(--color-link-hover);
-}
-a:hover {
-  color: var(--color-link-hover);
+  &:hover {
+    text-decoration-color: var(--color-link-hover);
+  }
 }
 </style>
