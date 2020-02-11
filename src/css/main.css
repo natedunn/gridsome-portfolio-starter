@@ -112,7 +112,7 @@ body::-webkit-scrollbar-thumb {
   text-underline-offset: 4px;
 } */
 /* a:hover, */
-a.active:not(.logo) {
+nav a.active:not(.logo) {
   color: var(--color-link-hover);
   text-decoration: underline solid var(--color-link-underline);
   text-underline-offset: var(--text-underline-offset);
