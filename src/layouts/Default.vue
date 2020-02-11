@@ -7,7 +7,11 @@
         class="container mx-auto flex flex-wrap justify-between items-center py-8"
       >
         <div>
-          <Link class="flex justify-center items-center logo" to="/">
+          <Link
+            class="flex justify-center items-center logo"
+            to="/"
+            :underline="false"
+          >
             <span class="text-3xl">⟁</span>
           </Link>
         </div>
