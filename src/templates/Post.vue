@@ -113,7 +113,7 @@ export default {
       return this.$page.post.title ? this.$page.post.title : null;
     },
     dateFormat() {
-      return moment(this.$page.date).format("MMMM D, Y");
+      return moment(this.$page.post.date, "YYYY-MM-DD").format("MMMM D, Y");
     }
   }
 };
