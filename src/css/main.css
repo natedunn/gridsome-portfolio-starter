@@ -108,13 +108,8 @@ body::-webkit-scrollbar-thumb {
   transition: background-color 0.25s;
 }
 
-/* a {
-  color: var(--color-link);
-  text-decoration: underline solid var(--color-link-underline);
-  text-underline-offset: 4px;
-} */
-/* a:hover, */
-a.active:not(.logo, .is-disabled) {
+/* nav */
+nav a.active:not(.logo) {
   color: var(--color-link-hover);
   text-decoration: underline solid var(--color-link-underline);
   text-underline-offset: var(--text-underline-offset);

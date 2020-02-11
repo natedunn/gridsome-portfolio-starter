@@ -11,7 +11,7 @@
     <div>Page {{ currentPage }} of {{ totalPages }}</div>
     <Link
       :to="nextPage"
-      :underline="!showPreviousPage ? false : true"
+      :underline="!showNextPage ? false : true"
       :class="{
         'text-disabled cursor-not-allowed is-disabled': !showNextPage
       }"
