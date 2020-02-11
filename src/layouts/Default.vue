@@ -43,7 +43,7 @@
             <Link to="/projects/" :underline="false">Projects</Link>
           </li>
           <li class="mr-8 mb-6 lg:mb-0">
-            <Link to="/blog" :underline="false">Blog</Link>
+            <Link to="/posts" :underline="false">Posts</Link>
           </li>
           <li>
             <theme-switcher :theme="theme" @themeChanged="updateTheme" />

@@ -1,12 +1,12 @@
 ---
 title: Test Project
-path: /test-project
+slug: test-project
 date: 2020-01-01
 summary: Testing projects
 tags: ["project"]
 ---
 
-![background](./images/blog_bg_4.jpg)
+![background](./images/posts_bg_4.jpg)
 
 ## A little bit about it
 

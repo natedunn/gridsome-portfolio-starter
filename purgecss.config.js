@@ -1,5 +1,5 @@
 class TailwindExtractor {
-  static extract(content) {
+  static extract (content) {
     return content.match(/[A-z0-9-:\\/]+/g)
   }
 }
@@ -13,7 +13,7 @@ module.exports = {
     './src/**/*.pug',
     './src/**/*.md',
     './docs/**/*.md',
-    './blog/**/*.md',
+    './posts/**/*.md',
   ],
   whitelist: [
     'body',

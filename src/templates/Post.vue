@@ -11,7 +11,7 @@
         }}</Link>
       </div>
       <div class="mb-8">
-        <Link to="/blog" class="font-bold uppercase">Back to Blog</Link>
+        <Link to="/posts" class="font-bold uppercase">Back to all posts</Link>
       </div>
     </div>
   </Layout>

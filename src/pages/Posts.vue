@@ -4,7 +4,7 @@
       <div
         class="border-b border-primary pb-2 flex justify-between items-center"
       >
-        <h1 class="text-4xl font-bold font-mono">Writings</h1>
+        <h1 class="text-4xl font-bold font-mono">Posts</h1>
         <Link href="/rss.xml">RSS</Link>
       </div>
       <section class="mt-6">
@@ -25,7 +25,7 @@
       <pagination-posts
         class="mt-6 pt-6 border-t border-primary"
         v-if="$page.posts.pageInfo.totalPages > 1"
-        base="/blog"
+        base="/posts"
         :totalPages="$page.posts.pageInfo.totalPages"
         :currentPage="$page.posts.pageInfo.currentPage"
       />
@@ -60,7 +60,7 @@ import PaginationPosts from "../components/PaginationPosts";
 
 export default {
   metaInfo: {
-    title: "Blog"
+    title: "Posts"
   },
   components: {
     PaginationPosts
