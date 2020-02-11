@@ -37,13 +37,13 @@
             <search-input v-if="$route.path.match(/^\/(blog|tag).*$/g)" />
           </li>
           <li class="mr-8 mb-6 lg:mb-0">
-            <Link to="/about" class>About</Link>
+            <Link to="/about" :underline="false">About</Link>
           </li>
           <li class="mr-8 mb-6 lg:mb-0">
-            <Link to="/projects/" class>Projects</Link>
+            <Link to="/projects/" :underline="false">Projects</Link>
           </li>
           <li class="mr-8 mb-6 lg:mb-0">
-            <Link to="/blog" class>Blog</Link>
+            <Link to="/blog" :underline="false">Blog</Link>
           </li>
           <li>
             <theme-switcher :theme="theme" @themeChanged="updateTheme" />

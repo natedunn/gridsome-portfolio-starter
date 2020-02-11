@@ -1,8 +1,8 @@
 <template>
-  <a v-if="href" :href="href">
+  <a v-if="href" :href="href" :class="styles">
     <slot>{{ text }}</slot>
   </a>
-  <g-link v-else :to="to">
+  <g-link v-else :to="to" :class="styles">
     <slot>{{ text }}</slot>
   </g-link>
 </template>
@@ -12,16 +12,41 @@ export default {
   props: {
     to: {
       type: [String, Object],
-      default: null,
+      default: null
+    },
+    underline: {
+      type: Boolean,
+      default: true
     },
     href: {
       type: String,
-      default: null,
+      default: null
     },
     text: {
       type: String,
-      default: null,
-    },
+      default: null
+    }
+  },
+  computed: {
+    styles() {
+      return this.underline ? "is-underlined" : null;
+    }
   }
-}
+};
 </script>
+
+<style lang="postcss">
+a {
+  color: var(--color-link);
+}
+a.is-underlined {
+  text-decoration: underline solid var(--color-link-underline);
+  text-underline-offset: var(--text-underline-offset);
+}
+a.is-underlined:hover {
+  text-decoration-color: var(--color-link-hover);
+}
+a:hover {
+  color: var(--color-link-hover);
+}
+</style>

@@ -8,16 +8,18 @@
   --color-whitesmoke: whitesmoke;
   --color-nero: #1d1d1d;
   --color-gray: gray;
+  --text-underline-offset: 3px;
 }
 
 /* Light theme */
 .theme-light {
   /* Background */
-  --bg-primary: whitesmoke;
+  --bg-primary: white;
   --bg-secondary: theme("colors.gray.00");
   /* Link */
-  --color-link: var(--color-blue);
-  --color-link-hover: #000446;
+  --color-link: var(--color-nero);
+  --color-link-hover: blue;
+  --color-link-underline: theme("colors.gray.400");
   /* Scrollbar */
   --color-scrollbar: var(--color-nero);
   --color-scrollbar-bg: var(--color-whitesmoke);
@@ -25,7 +27,7 @@
   --textColor-primary: var(--color-nero);
   --textColor-secondary: var(--color-gray);
   /* Border */
-  --borderColor-primary: theme("colors.gray.400");
+  --borderColor-primary: theme("colors.gray.200");
 
   --bg-background-form: white;
 
@@ -47,15 +49,15 @@
   --bg-primary: var(--color-nero);
   --bg-secondary: red;
   /* Link */
-  --color-link: dodgerblue;
-  --color-link-hover: lightBlue;
+  --color-link: white;
+  --color-link-hover: #548fff;
+  --color-link-underline: theme("colors.gray.700");
   /* Scrollbar */
   --color-scrollbar: var(--color-whitesmoke);
   --color-scrollbar-bg: var(--bg-primary);
   /* Text */
   --textColor-primary: var(--color-whitesmoke);
   --textColor-secondary: var(--color-gray);
-
   /* Border */
   --borderColor-primary: theme("colors.gray.700");
 
@@ -104,16 +106,19 @@ body::-webkit-scrollbar-thumb {
   transition: background-color 0.25s;
 }
 
-a {
+/* a {
   color: var(--color-link);
-}
-a:hover {
+  text-decoration: underline solid var(--color-link-underline);
+  text-underline-offset: 4px;
+} */
+/* a:hover, */
+a.active:not(.logo) {
   color: var(--color-link-hover);
-}
-
-nav .active:not(.logo) {
-  border-color: var(--color-link);
-  @apply border-b-2 pb-1;
+  text-decoration: underline solid var(--color-link-underline);
+  text-underline-offset: var(--text-underline-offset);
+  &:hover {
+    text-decoration-color: var(--color-link-hover);
+  }
 }
 
 .checkmark {
