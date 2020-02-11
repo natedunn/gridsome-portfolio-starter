@@ -1,10 +1,10 @@
 <template>
   <Layout>
-    <div class="container mx-auto py-16">
+    <div class="container mx-auto py-12">
+      <h1 class="text-4xl font-bold font-mono">About me</h1>
+      <div class="h-6"></div>
       <g-image src="@/images/me-wide.jpg" class="w-full" />
       <div class="h-12"></div>
-      <h1 class="text-4xl font-bold font-mono">More about me</h1>
-      <div class="h-6"></div>
       <section>
         <p>
           I'm Nate Dunn, a

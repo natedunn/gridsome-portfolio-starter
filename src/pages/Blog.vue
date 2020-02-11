@@ -1,15 +1,19 @@
 <template>
   <Layout>
-    <div class="container mx-auto py-16">
-      <div class="border-b border-primary pb-2 flex justify-between items-center">
+    <div class="container mx-auto py-12">
+      <div
+        class="border-b border-primary pb-2 flex justify-between items-center"
+      >
         <h1 class="text-4xl font-bold font-mono">Writings</h1>
         <Link href="/rss.xml">RSS</Link>
       </div>
       <section class="mt-6">
-        <div v-for="post in $page.posts.edges" :key="post.id" class="post border-primary border-b">
+        <div v-for="post in $page.posts.edges" :key="post.id" class="post   ">
           <div class="flex justify-between items-center">
             <h2 class="text-2xl font-mono">
-              <Link class="inline-block py-4" :to="post.node.path">{{ post.node.title }}</Link>
+              <Link class="inline-block py-2" :to="post.node.path">{{
+                post.node.title
+              }}</Link>
             </h2>
             <div class="text-secondary">
               <span>{{ post.node.date }}</span>
@@ -19,7 +23,7 @@
       </section>
 
       <pagination-posts
-        class="mt-4"
+        class="mt-6 pt-6 border-t border-primary"
         v-if="$page.posts.pageInfo.totalPages > 1"
         base="/blog"
         :totalPages="$page.posts.pageInfo.totalPages"
@@ -52,15 +56,15 @@
 </page-query>
 
 <script>
-import PaginationPosts from '../components/PaginationPosts'
+import PaginationPosts from "../components/PaginationPosts";
 
 export default {
   metaInfo: {
-    title: 'Blog'
+    title: "Blog"
   },
   components: {
     PaginationPosts
   }
-}
+};
 </script>
 

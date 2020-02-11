@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="container mx-auto py-16">
+    <div class="container mx-auto py-12">
       <h1 class="text-4xl font-bold font-mono">Projects</h1>
       <section class="my-8 flex flex-row flex-wrap justify-between projects">
         <ProjectCard title="Proper" link="https://useproper.dev" />
