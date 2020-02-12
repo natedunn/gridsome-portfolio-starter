@@ -23,7 +23,6 @@
 <script>
 import Link from "@/components/Link";
 import ProjectCard from "@/components/ProjectCard";
-import { config } from "@/helpers.js";
 export default {
   components: {
     Link,
@@ -31,11 +30,6 @@ export default {
   },
   metaInfo: {
     title: "Projects"
-  },
-  computed: {
-    config() {
-      return config;
-    }
   }
 };
 </script>
