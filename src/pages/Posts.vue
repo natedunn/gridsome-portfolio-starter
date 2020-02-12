@@ -22,8 +22,9 @@
         </div>
       </section>
 
+      <div class="mt-6 pt-6 border-t border-primary"></div>
+
       <pagination-posts
-        class="mt-6 pt-6 border-t border-primary"
         v-if="$page.posts.pageInfo.totalPages > 1"
         base="/posts"
         :totalPages="$page.posts.pageInfo.totalPages"
@@ -35,7 +36,7 @@
 
 <page-query>
   query Posts($page: Int) {
-    posts: allPost(sortBy: "date", order: DESC, perPage: 6, page: $page)
+    posts: allPost(sortBy: "date", order: DESC, perPage: 12, page: $page)
       @paginate {
       totalCount
       pageInfo {
