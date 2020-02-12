@@ -1,9 +1,17 @@
 <template>
   <Layout>
     <div class="container mx-auto py-12">
-      <h1 class="text-4xl font-bold font-mono">Projects</h1>
-      <section class="my-8 flex flex-row flex-wrap justify-between projects">
-        <ProjectCard title="Proper" link="https://useproper.dev" />
+      <h1 class="text-4xl font-bold font-mono">
+        Projects
+      </h1>
+      <section
+        class="my-8 flex flex-col md:flex-row md:flex-wrap justify-between projects"
+      >
+        <ProjectCard
+          title="Proper"
+          link="https://useproper.dev"
+          image="default-cover.jpg"
+        />
         <ProjectCard title="Weird Web" link="https://weirdweb.dev" />
         <ProjectCard title="Rad" link="https://radlist.io" />
         <ProjectCard title="Personal site" link="https://natedunn.net" />
@@ -15,6 +23,7 @@
 <script>
 import Link from "@/components/Link";
 import ProjectCard from "@/components/ProjectCard";
+import { config } from "@/helpers.js";
 export default {
   components: {
     Link,
@@ -22,13 +31,22 @@ export default {
   },
   metaInfo: {
     title: "Projects"
+  },
+  computed: {
+    config() {
+      return config;
+    }
   }
 };
 </script>
 
 <style lang="postcss">
 .projects > div {
-  @apply mb-6;
-  width: calc(50% - theme("spacing.4"));
+  margin-bottom: theme("spacing.6");
+}
+@screen md {
+  .projects > div {
+    width: calc(50% - theme("spacing.4"));
+  }
 }
 </style>
