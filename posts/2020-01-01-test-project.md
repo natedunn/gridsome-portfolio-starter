@@ -6,7 +6,7 @@ summary: Testing projects
 tags: ["project"]
 ---
 
-![background](./images/posts_bg_4.jpg)
+![background](./images/blog_bg_4.jpg)
 
 ## A little bit about it
 
