@@ -10,7 +10,7 @@ const postcssPresetEnv = require('postcss-preset-env')
 
 const postcssPlugins = [
   tailwind(),
-  postcssPresetEnv({ stage: 0, }),
+  postcssPresetEnv({ stage: 0 }),
 ]
 
 if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
