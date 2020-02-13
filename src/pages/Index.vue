@@ -1,24 +1,33 @@
 <template>
   <Layout>
     <div class="container mx-auto py-12">
-      <section>
-        <h1 class="text-5xl font-mono font-bold">Hi. I'm Nate Dunn.</h1>
-        <h2 class="text-2xl font-mono font-bold">
-          I am a front-end web developer & designer.
+      <section class="text-center border-b border-primary pt-6 pb-20">
+        <h1 class="text-5xl font-mono">Hi. I'm Nate Dunn.</h1>
+        <h2 class="text-2xl font-mono">
+          I am a front-end web developer &amp; designer.
         </h2>
       </section>
       <div class="h-8"></div>
-      <section>
-        <h2 class="text-4xl">
-          Here are some things that I have made recently:
-        </h2>
-        <div>< Here will be some recent projects ></div>
-      </section>
-      <div class="h-8"></div>
-      <section>
-        <h2 class="text-4xl">I have written some things too:</h2>
-        <div>< Here will be some recent blog posts ></div>
-      </section>
+      <div class="flex flex-wrap recents">
+        <section>
+          <h2 class="font-mono text-2xl">Recent posts</h2>
+          <ul>
+            <li><Link to="/thing">Item here</Link></li>
+            <li><Link to="/thing">Another One</Link></li>
+            <li><Link to="/thing">One More</Link></li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="font-mono text-2xl">
+            Featured projects
+          </h2>
+          <ul>
+            <li><Link to="/thing">Item here</Link></li>
+            <li><Link to="/thing">Another One</Link></li>
+            <li><Link to="/thing">One More</Link></li>
+          </ul>
+        </section>
+      </div>
     </div>
   </Layout>
 </template>
@@ -30,4 +39,12 @@ export default {
   }
 };
 </script>
+
+<style lang="postcss" scoped>
+@screen md {
+  .recents > section {
+    width: calc(50% - theme("spacing.4"));
+  }
+}
+</style>
 
