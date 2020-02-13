@@ -27,7 +27,7 @@ module.exports = {
       },
       fontFamily: {
         'sans': 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-        'mono': '"Inconsolata", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+        'mono': '"JetBrains Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
       }
     },
   },
