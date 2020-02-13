@@ -5,6 +5,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 import Link from '@/components/Link.vue';
 import VueScrollTo from 'vue-scrollto'
 import VueFuse from 'vue-fuse'
+require("typeface-jetbrains-mono");
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
@@ -42,11 +43,6 @@ export default function (Vue, { router, head, isClient }) {
     rel: 'preconnect',
     href: 'https://fonts.gstatic.com/',
     crossorigin: "use-credentials"
-  })
-
-  head.link.push({
-    rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css?family=Inconsolata:400,700|Roboto:300,400&display=swap'
   })
 }
 
