@@ -10,7 +10,7 @@
         <ProjectCard
           title="Proper"
           link="https://useproper.dev"
-          image="default-cover.jpg"
+          image="cardcover-proper.jpg"
         />
         <ProjectCard title="Weird Web" link="https://weirdweb.dev" />
         <ProjectCard title="Rad" link="https://radlist.io" />
