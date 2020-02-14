@@ -2,9 +2,9 @@
   <Layout>
     <div class="container mx-auto py-12">
       <section class="text-center border-b border-primary pt-6 pb-20">
-        <h1 class="text-5xl font-mono">Hi. I'm Nate Dunn.</h1>
-        <h2 class="text-2xl font-mono">
-          I am a front-end web developer &amp; designer.
+        <h1 class="text-4xl font-mono">Hi. I'm Nate Dunn.</h1>
+        <h2 class="text-lg font-mono mt-4">
+          I am a font-end web developer &amp; designer.
         </h2>
       </section>
       <div class="h-8"></div>
