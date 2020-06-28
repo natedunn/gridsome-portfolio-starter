@@ -1,9 +1,7 @@
 <template>
   <Layout>
-    <div class="container mx-auto py-12">
-      <h1 class="text-4xl font-bold font-mono">
-        Projects
-      </h1>
+    <div class="py-12">
+      <Heading el="h1">projects</Heading>
       <section
         class="my-8 flex flex-col md:flex-row md:flex-wrap justify-between projects"
       >
@@ -23,10 +21,12 @@
 <script>
 import Link from "@/components/Link";
 import ProjectCard from "@/components/ProjectCard";
+import Heading from "@/components/Heading";
 export default {
   components: {
     Link,
-    ProjectCard
+    ProjectCard,
+    Heading
   },
   metaInfo: {
     title: "Projects"

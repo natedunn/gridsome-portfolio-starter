@@ -4,7 +4,7 @@
       <div
         class="border-b border-primary pb-2 flex justify-between items-center"
       >
-        <h1 class="text-4xl font-bold font-mono">Posts</h1>
+        <Heading el="h1">posts</Heading>
         <Link href="/rss.xml">RSS</Link>
       </div>
       <section class="mt-6">
@@ -58,14 +58,14 @@
 
 <script>
 import PaginationPosts from "../components/PaginationPosts";
-
+import Heading from "@/components/Heading";
 export default {
   metaInfo: {
     title: "Posts"
   },
   components: {
-    PaginationPosts
+    PaginationPosts,
+    Heading
   }
 };
 </script>
-

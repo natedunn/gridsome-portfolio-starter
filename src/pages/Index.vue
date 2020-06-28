@@ -1,14 +1,25 @@
 <template>
   <Layout>
-    <div class="container mx-auto py-12">
-      <section class="text-center border-b border-primary pt-6 pb-20">
-        <h1 class="text-4xl font-mono">Hi. I'm Nate Dunn.</h1>
-        <h2 class="text-lg font-mono mt-4">
+    <div>
+      <div class="h-12"></div>
+      <section class="container">
+        <h1 class="font-mono inline-block">
+          <Heading el="div">hello</Heading>
+          <div
+            class="inline-block font-bold text-3xl md:text-4xl lg:text-4xl mt-3 pl-10"
+          >
+            <span class="inline-block w-full mb-3">Hi, my name is Nate.</span>
+            <span>I design and develop things for the internet.</span>
+          </div>
+        </h1>
+        <!-- <h2 class="text-lg font-mono mt-4">
           I am a font-end web developer &amp; designer.
-        </h2>
+        </h2> -->
       </section>
+      <div class="h-12"></div>
+      <div class="inline-block w-full border-b border-primary"></div>
       <div class="h-8"></div>
-      <div class="flex flex-wrap recents">
+      <div class="container flex flex-wrap recents">
         <section>
           <h2 class="font-mono text-2xl">Recent posts</h2>
           <ul>
@@ -33,7 +44,11 @@
 </template>
 
 <script>
+import Heading from "@/components/Heading";
 export default {
+  components: {
+    Heading
+  },
   metaInfo: {
     title: "Home"
   }

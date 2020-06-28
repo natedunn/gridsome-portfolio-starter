@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div class="container mx-auto py-12">
-      <h1 class="text-4xl font-bold font-mono">About me</h1>
+      <Heading el="h1">about</Heading>
       <div class="h-6"></div>
       <g-image src="@/images/me-wide.jpg" class="w-full" />
       <div class="h-12"></div>
@@ -43,13 +43,14 @@
 
 <script>
 import Link from "@/components/Link";
-
+import Heading from "@/components/Heading";
 export default {
   metaInfo: {
     title: "About"
   },
   components: {
-    Link
+    Link,
+    Heading
   }
 };
 </script>

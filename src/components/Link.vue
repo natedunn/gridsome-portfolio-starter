@@ -40,7 +40,7 @@ export default {
 a:not(.is-disabled) {
   color: var(--color-link);
   &:hover {
-    color: var(--color-link-hover);
+    color: var(--textColor-accent);
   }
 }
 /* is-underlined */
@@ -48,7 +48,7 @@ a:not(.is-disabled).is-underlined {
   text-decoration: underline solid var(--color-link-underline);
   text-underline-offset: var(--text-underline-offset);
   &:hover {
-    text-decoration-color: var(--color-link-hover);
+    text-decoration-color: var(--textColor-accent);
   }
 }
 </style>

@@ -13,6 +13,7 @@
     "@gridsome/transformer-remark": "^0.4.0",
     "@gridsome/vue-remark": "^0.1.9",
     "@sindresorhus/slugify": "^0.10.0",
+    "@tailwindcss/ui": "^0.3.0",
     "axios": "^0.19.1",
     "gridsome": "^0.7.12",
     "gridsome-plugin-remark-shiki": "^0.3.1",
@@ -22,7 +23,8 @@
     "postcss-preset-env": "^6.7.0",
     "typeface-jetbrains-mono": "^0.1.2",
     "vue-fuse": "^2.2.0",
-    "vue-scrollto": "^2.17.1"
+    "vue-scrollto": "^2.17.1",
+    "vue-svg-loader": "^0.16.0"
   },
   "devDependencies": {
     "eslint": "^6.8.0",

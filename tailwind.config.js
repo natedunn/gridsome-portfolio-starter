@@ -20,10 +20,17 @@ module.exports = {
       borderColor: {
         primary: 'var(--borderColor-primary)',
       },
+      backgroundColor: {
+        primary: "var(--bg-primary)",
+        'primary-invert': "var(--bg-primary-invert)",
+        accent: "var(--textColor-accent)",
+      },
       textColor: {
         primary: 'var(--textColor-primary)',
+        'primary-invert': 'var(--textColor-primary-invert)',
         secondary: 'var(--textColor-secondary)',
-        disabled: 'var(--textColor-disabled)'
+        disabled: 'var(--textColor-disabled)',
+        accent: 'var(--textColor-accent)'
       },
       fontFamily: {
         'sans': 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
@@ -36,7 +43,7 @@ module.exports = {
       addComponents({
         '.container': {
           width: '100%',
-          '@apply px-12': {},
+          // '@apply px-6': {},
           '@screen sm': {
             maxWidth: '600px',
           },

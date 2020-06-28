@@ -1,10 +1,10 @@
 <template>
   <div
-    class="content-wrapper font-sans text-primary leading-normal flex flex-col min-h-screen"
+    class="max-w-4xl mx-auto px-8 font-sans text-primary leading-normal flex flex-col min-h-screen"
   >
-    <header class="border-t-14 border-gray-800">
+    <header>
       <nav
-        class="container mx-auto flex flex-wrap justify-between items-center py-8"
+        class="flex flex-wrap justify-between items-center py-8 border-b border-primary"
       >
         <div>
           <Link
@@ -12,7 +12,9 @@
             to="/"
             :underline="false"
           >
-            <span class="text-3xl">⟁</span>
+            <span class="text-3xl">
+              <Logo class="text-accent w-12" />
+            </span>
           </Link>
         </div>
         <div class="block lg:hidden">
@@ -60,9 +62,7 @@
       <slot />
     </div>
     <footer>
-      <div
-        class="container mx-auto flex flex-col lg:flex-row items-center justify-between py-8"
-      >
+      <div class="flex flex-col lg:flex-row items-center justify-between py-8">
         <div class="mb-8 lg:mb-0">
           <div>© {{ currentYear }}. All rights reserved.</div>
           <div>
@@ -186,11 +186,13 @@
 <script>
 import SearchInput from "@/components/SearchInput";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
+import Logo from "@/images/logo.svg";
 
 export default {
   components: {
     SearchInput,
-    ThemeSwitcher
+    ThemeSwitcher,
+    Logo
   },
   mounted() {
     this.theme = localStorage.getItem("theme") || "theme-light";
