@@ -13,12 +13,13 @@ const postcssPlugins = [
   postcssPresetEnv({ stage: 0 }),
 ]
 
-if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
+if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss(require('./purgecss.config.js')))
 
 module.exports = {
   siteName: 'Nate Dunn (@natedunn)',
   siteDescription: 'Front-end web developer & designer',
   siteUrl: 'https://personal-site-gridsome.netlify.com',
+  pathPrefix: '/',
   plugins: [
     {
       use: '@gridsome/vue-remark',
