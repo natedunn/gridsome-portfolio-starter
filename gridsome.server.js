@@ -23,7 +23,7 @@ module.exports = function (api, options) {
     'path/'  =>  '/path'
     '/path/' =>  '/path'
     */
-    const cleanedPathPrefix = `${pathPrefix ? ['', ...pathPrefix.split('/').filter(dir=>dir.length)].join('/') : ''}`
+    const cleanedPathPrefix = `${pathPrefix ? ['', ...pathPrefix.split('/').filter(dir => dir.length)].join('/') : ''}`
 
     /*
     Query
