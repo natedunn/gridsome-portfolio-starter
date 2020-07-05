@@ -33,7 +33,6 @@ import Heading from "@/components/Heading";
 import Project from "@/components/Project";
 export default {
   components: {
-    Link,
     Heading,
     Project
   },
