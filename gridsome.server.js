@@ -72,4 +72,17 @@ module.exports = function (api, options) {
       fs.writeFileSync(path.resolve(process.cwd(), output.dir, fileName), JSON.stringify(posts))
     }
   })
+
+
+  api.loadSource(async actions => {
+    const Project = require('./data/projects.json');
+
+    const Projects = Project.projects;
+
+    const collection = actions.addCollection('Projects')
+
+    for (const project of Projects) {
+      collection.addNode(project);
+    }
+  })
 }

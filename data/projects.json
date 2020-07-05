@@ -1,0 +1,67 @@
+{
+  "projects": [
+    {
+      "name": "Press CSS",
+      "images": ["cardcover-proper.jpg", "cardcover-proper.jpg"],
+      "description": [
+        "Press CSS is an internal design system and CSS framework built for Frontiers USA",
+        "Press CSS is built on top of a modified config of Tailwind CSS"
+      ],
+      "url": [
+        {
+          "text": "Github",
+          "url": "https://github.com/frontiersusa/press-css"
+        },
+        {
+          "text": "Preview",
+          "url": "https://frontiersusa.github.io/press-css/"
+        }
+      ]
+    },
+    {
+      "name": "Proper",
+      "images": ["cardcover-proper.jpg", "cardcover-proper.jpg"],
+      "description": [
+        "Proper is a bash script builder to help automate the installation and updating process for Mac's dependencies.",
+        "Proper is built using Next.js and deployed on Netlify."
+      ],
+      "url": [
+        {
+          "text": "Github",
+          "url": "https://github.com/useproper/proper-app"
+        },
+        {
+          "text": "Try Proper",
+          "url": "https://useproper.dev"
+        },
+        {
+          "text": "Blog Post",
+          "url": "/post/introducing-proper"
+        }
+      ]
+    },
+    {
+      "name": "Vue Zephyrs",
+      "images": ["cardcover-proper.jpg", "cardcover-proper.jpg"],
+      "description": [
+        "Vue Zephyrs is a flexible component library.",
+        "Out-of-the-box, Vue Zephyrs uses Tailwind CSS, however in the future you will be able to bring your own CSS framework.",
+        "(Currently in Alpha, so this is very early)"
+      ],
+      "url": [
+        {
+          "text": "Github",
+          "url": "https://github.com/useproper/proper-app"
+        },
+        {
+          "text": "Try Proper",
+          "url": "https://useproper.dev"
+        },
+        {
+          "text": "Blog Post",
+          "url": "/post/introducing-proper"
+        }
+      ]
+    }
+  ]
+}
