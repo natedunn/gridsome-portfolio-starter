@@ -48,7 +48,6 @@ export default {
     title: "About"
   },
   components: {
-    Link,
     Heading
   }
 };
