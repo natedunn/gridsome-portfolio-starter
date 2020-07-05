@@ -7,6 +7,7 @@
         :src="getImage(value)"
         :key="key + value"
         :class="key > 0 ? `mt-6` : null"
+        quality="100"
       />
     </div>
     <div class="md:w-1/2 pl-4">
