@@ -53,7 +53,7 @@ export default {
 };
 </script>
 
-<style lang="postcss">
+<style lang="postcss"scoped>
 p {
   @apply text-xl mb-4 leading-relaxed;
 }
