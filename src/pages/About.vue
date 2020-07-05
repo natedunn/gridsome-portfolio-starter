@@ -32,7 +32,7 @@
         </p>
         <p>
           If you would like to get in touch please try my email or
-          <Link to="https://twitter.com/natedunn">Twitter</Link>. Thanks for
+          <Link url="https://twitter.com/natedunn">Twitter</Link>. Thanks for
           stopping by. 👋🏻
         </p>
       </section>
@@ -42,7 +42,6 @@
 </template>
 
 <script>
-import Link from "@/components/Link";
 import Heading from "@/components/Heading";
 export default {
   metaInfo: {

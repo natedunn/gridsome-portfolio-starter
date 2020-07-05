@@ -23,9 +23,9 @@
         <section>
           <h2 class="font-mono text-2xl">Recent posts</h2>
           <ul>
-            <li><Link to="/thing">Item here</Link></li>
-            <li><Link to="/thing">Another One</Link></li>
-            <li><Link to="/thing">One More</Link></li>
+            <li><Link url="/thing">Item here</Link></li>
+            <li><Link url="/thing">Another One</Link></li>
+            <li><Link url="/thing">One More</Link></li>
           </ul>
         </section>
         <section>
@@ -33,9 +33,9 @@
             Featured projects
           </h2>
           <ul>
-            <li><Link to="/thing">Item here</Link></li>
-            <li><Link to="/thing">Another One</Link></li>
-            <li><Link to="/thing">One More</Link></li>
+            <li><Link url="/thing">Item here</Link></li>
+            <li><Link url="/thing">Another One</Link></li>
+            <li><Link url="/thing">One More</Link></li>
           </ul>
         </section>
       </div>

@@ -9,7 +9,7 @@
         <div>
           <Link
             class="flex justify-center items-center logo"
-            to="/"
+            url="/"
             :underline="false"
           >
             <span class="text-3xl">
@@ -43,13 +43,13 @@
             <search-input v-if="$route.path.match(/^\/(blog|tag).*$/g)" />
           </li>
           <li class="mr-8 mb-6 lg:mb-0">
-            <Link to="/about" :underline="false">About</Link>
+            <Link url="/about" :underline="false">About</Link>
           </li>
           <li class="mr-8 mb-6 lg:mb-0">
-            <Link to="/projects/" :underline="false">Projects</Link>
+            <Link url="/projects/" :underline="false">Projects</Link>
           </li>
           <li class="mr-8 mb-6 lg:mb-0">
-            <Link to="/posts" :underline="false">Posts</Link>
+            <Link url="/posts" :underline="false">Posts</Link>
           </li>
           <li>
             <theme-switcher :theme="theme" @themeChanged="updateTheme" />

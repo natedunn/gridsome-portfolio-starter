@@ -1,15 +1,25 @@
 <template>
-  <a v-if="href" :href="href" :class="styles">
+  <!-- <a v-if="href" :href="href" :class="styles">
     <slot>{{ text }}</slot>
   </a>
   <g-link v-else :to="to" :class="styles">
     <slot>{{ text }}</slot>
-  </g-link>
+  </g-link> -->
+
+  <component :class="styles" v-bind:is="link.is" v-bind="link.props">
+    <slot>
+      {{ text }}
+    </slot>
+  </component>
 </template>
 
 <script>
 export default {
   props: {
+    url: {
+      type: String,
+      required: true
+    },
     to: {
       type: [String, Object],
       default: null
@@ -30,6 +40,25 @@ export default {
   computed: {
     styles() {
       return this.underline ? "is-underlined" : null;
+    },
+    link() {
+      const { url } = this;
+      if (url.match(/^(http(s)?|ftp):\/\//)) {
+        return {
+          is: "a",
+          props: {
+            href: url,
+            target: "_blank",
+            rel: "noopener"
+          }
+        };
+      }
+      return {
+        is: "g-link",
+        props: {
+          to: url
+        }
+      };
     }
   }
 };

@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-between items-center">
     <Link
-      :to="previousPage"
+      :url="previousPage"
       :underline="!showPreviousPage ? false : true"
       :class="{
         'text-disabled cursor-not-allowed is-disabled': !showPreviousPage
@@ -10,7 +10,7 @@
     >
     <div>Page {{ currentPage }} of {{ totalPages }}</div>
     <Link
-      :to="nextPage"
+      :url="nextPage"
       :underline="!showNextPage ? false : true"
       :class="{
         'text-disabled cursor-not-allowed is-disabled': !showNextPage

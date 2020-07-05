@@ -6,12 +6,12 @@
       <div class="markdown-body mb-8" v-html="$page.post.content" />
       <div class="flex mb-8 text-sm tags">
         <span class="inline-block mr-4">Filed under:</span>
-        <Link v-for="tag in $page.post.tags" :key="tag.id" :to="tag.path">{{
+        <Link v-for="tag in $page.post.tags" :key="tag.id" :url="tag.path">{{
           tag.title
         }}</Link>
       </div>
       <div class="mb-8">
-        <Link to="/posts" class="font-bold uppercase">Back to all posts</Link>
+        <Link url="/posts" class="font-bold uppercase">Back to all posts</Link>
       </div>
     </div>
   </Layout>

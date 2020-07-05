@@ -5,13 +5,13 @@
         class="border-b border-primary pb-2 flex justify-between items-center"
       >
         <Heading el="h1">posts</Heading>
-        <Link href="/rss.xml">RSS</Link>
+        <Link url="/rss.xml">RSS</Link>
       </div>
       <section class="mt-6">
         <div v-for="post in $page.posts.edges" :key="post.id" class="post   ">
           <div class="flex justify-between items-center">
             <h2 class="text-2xl font-mono">
-              <Link class="inline-block py-2" :to="post.node.path">{{
+              <Link class="inline-block py-2" :url="post.node.path">{{
                 post.node.title
               }}</Link>
             </h2>
