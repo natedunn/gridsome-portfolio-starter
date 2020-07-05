@@ -1,38 +1,66 @@
 <template>
   <Layout>
     <div class="py-12">
-      <Heading el="h1">projects</Heading>
-      <section
-        class="my-8 flex flex-col md:flex-row md:flex-wrap justify-between projects"
+      <div
+        class="border-b border-primary pb-2 flex justify-between items-center"
       >
-        <ProjectCard
-          title="Proper"
-          link="https://useproper.dev"
-          image="cardcover-proper.jpg"
-        />
-        <ProjectCard title="Weird Web" link="https://weirdweb.dev" />
-        <ProjectCard title="Rad" link="https://radlist.io" />
-        <ProjectCard title="Personal site" link="https://natedunn.net" />
+        <Heading el="h1">projects</Heading>
+      </div>
+      <section>
+        <Project
+          v-for="project in $page.allProjects.edges"
+          :title="project.node.name"
+          :images="project.node.images"
+          :links="project.node.url"
+          :key="project.node.name"
+        >
+          <template v-slot:desc>
+            <p
+              v-for="(desc, index) in project.node.description"
+              :class="index > 0 ? 'mt-4' : null"
+            >
+              {{ desc }}
+            </p>
+          </template>
+        </Project>
       </section>
     </div>
   </Layout>
 </template>
 
 <script>
-import Link from "@/components/Link";
-import ProjectCard from "@/components/ProjectCard";
 import Heading from "@/components/Heading";
+import Project from "@/components/Project";
 export default {
   components: {
     Link,
-    ProjectCard,
-    Heading
+    Heading,
+    Project
   },
   metaInfo: {
     title: "Projects"
   }
 };
 </script>
+
+<page-query>
+  query {
+    allProjects {
+      totalCount
+      edges {
+        node {
+          name
+          images
+          description
+          url {
+            text
+            url
+          }
+        }
+      }
+    }
+  }
+</page-query>
 
 <style lang="postcss">
 .projects > div {
