@@ -73,12 +73,9 @@ module.exports = function (api, options) {
     }
   })
 
-
   api.loadSource(async actions => {
     const Project = require('./data/projects.json');
-
     const Projects = Project.projects;
-
     const collection = actions.addCollection('Projects')
 
     for (const project of Projects) {
