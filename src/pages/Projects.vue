@@ -8,7 +8,7 @@
       </div>
       <section>
         <Project
-          v-for="project in $page.allProjects.edges"
+          v-for="project in $page.allProjects.edges.slice().reverse()"
           :title="project.node.name"
           :images="project.node.images"
           :links="project.node.url"
