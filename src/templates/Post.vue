@@ -100,14 +100,15 @@ export default {
     ogImageUrl() {
       return this.$page.post.cover
         ? this.config.siteUrl + this.$page.post.cover.src
-        : `${this.config.siteUrl}/images/default-cover.jpg`;
+        : this.config.siteUrl +
+            require(`!!assets-loader!@/images/default-cover.jpg`).src;
     },
     postUrl() {
       let siteUrl = this.config.siteUrl;
       let postPath = this.$page.post.path;
       return postPath
         ? `${siteUrl}${postPath}`
-        : `${siteUrl}/${slugify(this.$page.post.title)}/`;
+        : `${siteUrl}/post/${slugify(this.$page.post.title)}/`;
     },
     pageTitle() {
       return this.$page.post.title ? this.$page.post.title : null;
