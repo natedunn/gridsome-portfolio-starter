@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss(require(
 module.exports = {
   siteName: 'Nate Dunn (@natedunn)',
   siteDescription: 'Front-end web developer & designer',
-  siteUrl: 'https://personal-site-gridsome.netlify.com',
+  siteUrl: 'https://personal-site-gridsome.netlify.app',
   pathPrefix: '/',
   plugins: [
     {
@@ -52,13 +52,13 @@ module.exports = {
         contentTypeName: 'Post',
         feedOptions: {
           title: 'Gridsome Portfolio Starter Blog',
-          feed_url: 'https://personal-site-gridsome.netlify.com/rss.xml',
-          site_url: 'https://personal-site-gridsome.netlify.com/'
+          feed_url: 'https://personal-site-gridsome.netlify.app/rss.xml',
+          site_url: 'https://personal-site-gridsome.netlify.app/'
         },
         feedItemOptions: node => ({
           title: node.title,
           description: node.summary,
-          url: 'https://personal-site-gridsome.netlify.com' + node.path,
+          url: 'https://personal-site-gridsome.netlify.app' + node.path,
           author: 'Nate Dunn',
           date: node.date
         }),
