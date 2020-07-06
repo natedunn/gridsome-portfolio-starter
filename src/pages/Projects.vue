@@ -18,9 +18,8 @@
             <p
               v-for="(desc, index) in project.node.description"
               :class="index > 0 ? 'mt-4' : null"
-            >
-              {{ desc }}
-            </p>
+              v-html="desc"
+            ></p>
           </template>
         </Project>
       </section>
