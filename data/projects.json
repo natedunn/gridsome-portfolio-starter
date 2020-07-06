@@ -1,26 +1,31 @@
 {
   "projects": [
     {
-      "name": "Press CSS",
-      "images": ["cardcover-proper.jpg", "cardcover-proper.jpg"],
+      "name": "Vue Zephyrs",
+      "images": ["vue-zephyrs-cover.png"],
       "description": [
-        "Press CSS is an internal design system and CSS framework built for Frontiers USA",
-        "Press CSS is built on top of a modified config of Tailwind CSS"
+        "Vue Zephyrs is a flexible component library.",
+        "Out-of-the-box, Vue Zephyrs uses Tailwind CSS, however in the future you will be able to bring your own CSS framework.",
+        "<span class='italic'>Note: This project is currently in early Alpha.</span>"
       ],
       "url": [
         {
           "text": "Github",
-          "url": "https://github.com/frontiersusa/press-css"
+          "url": "https://github.com/useproper/proper-app"
         },
         {
-          "text": "Preview",
-          "url": "https://frontiersusa.github.io/press-css/"
+          "text": "View Docs",
+          "url": "https://vue-zephyrs.netlify.app/"
+        },
+        {
+          "text": "Blog Post",
+          "url": "/post/introducing-vue-zephyrs"
         }
       ]
     },
     {
       "name": "Proper",
-      "images": ["cardcover-proper.jpg", "cardcover-proper.jpg"],
+      "images": ["proper-cover.png", "proper-screenshot.png"],
       "description": [
         "Proper is a bash script builder to help automate the installation and updating process for Mac's dependencies.",
         "Proper is built using Next.js and deployed on Netlify."
@@ -41,25 +46,20 @@
       ]
     },
     {
-      "name": "Vue Zephyrs",
-      "images": ["cardcover-proper.jpg", "cardcover-proper.jpg"],
+      "name": "Press CSS",
+      "images": ["press-cover.png"],
       "description": [
-        "Vue Zephyrs is a flexible component library.",
-        "Out-of-the-box, Vue Zephyrs uses Tailwind CSS, however in the future you will be able to bring your own CSS framework.",
-        "(Currently in Alpha, so this is very early)"
+        "Press CSS is an internal design system and CSS framework built for Frontiers USA.",
+        "Press CSS is built on top of a modified config of Tailwind CSS."
       ],
       "url": [
         {
           "text": "Github",
-          "url": "https://github.com/useproper/proper-app"
+          "url": "https://github.com/frontiersusa/press-css"
         },
         {
-          "text": "Try Proper",
-          "url": "https://useproper.dev"
-        },
-        {
-          "text": "Blog Post",
-          "url": "/post/introducing-proper"
+          "text": "Preview",
+          "url": "https://frontiersusa.github.io/press-css/"
         }
       ]
     }
