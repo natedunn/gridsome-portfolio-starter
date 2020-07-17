@@ -5,8 +5,7 @@
       "images": ["vue-zephyrs-cover.png"],
       "description": [
         "Vue Zephyrs is a flexible component library.",
-        "Out-of-the-box, Vue Zephyrs uses Tailwind CSS, however in the future you will be able to bring your own CSS framework.",
-        "<span class='italic'>Note: This project is currently in early Alpha.</span>"
+        "Out-of-the-box, Vue Zephyrs uses Tailwind CSS, however in the future you will be able to bring your own CSS framework."
       ],
       "url": [
         {
