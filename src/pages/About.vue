@@ -3,7 +3,7 @@
     <div class="container mx-auto py-12">
       <Heading el="h1">about</Heading>
       <div class="h-6"></div>
-      <g-image src="@/images/me-wide.jpg" class="w-full" />
+      <g-image src="@/images/me-large-bw.jpg" class="w-full" />
       <div class="h-12"></div>
       <section>
         <p>

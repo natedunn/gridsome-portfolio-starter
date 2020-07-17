@@ -3,7 +3,8 @@
     <div>
       <div class="h-12"></div>
       <section class="container">
-        <h1 class="font-mono inline-block">
+        <g-image src="@/images/me-large.jpg" class="w-full" />
+        <h1 class="font-mono inline-block mt-8">
           <Heading el="div">hello</Heading>
           <div
             class="inline-block font-bold text-3xl md:text-4xl lg:text-4xl mt-3 pl-10"
@@ -17,9 +18,9 @@
         </h2> -->
       </section>
       <div class="h-12"></div>
-      <div class="inline-block w-full border-b border-primary"></div>
-      <div class="h-8"></div>
-      <div class="container flex flex-wrap recents">
+      <!-- <div class="inline-block w-full border-b border-primary"></div> -->
+      <!-- <div class="h-8"></div> -->
+      <!-- <div class="container flex flex-wrap recents">
         <section>
           <h2 class="font-mono text-2xl">Recent posts</h2>
           <ul>
@@ -38,7 +39,7 @@
             <li><Link url="/thing">One More</Link></li>
           </ul>
         </section>
-      </div>
+      </div> -->
     </div>
   </Layout>
 </template>
