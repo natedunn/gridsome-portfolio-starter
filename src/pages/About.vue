@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="container mx-auto py-12">
+    <div class="max-w-4xl mx-auto py-12">
       <Heading el="h1">about</Heading>
       <div class="h-6"></div>
       <g-image src="@/images/me-large-bw.jpg" class="w-full" />

@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="container mx-auto py-12">
+    <div class="max-w-4xl mx-auto py-12">
       <div
         v-for="doc in $page.docs.edges"
         :key="doc.id"

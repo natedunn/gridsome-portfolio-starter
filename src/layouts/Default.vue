@@ -61,13 +61,15 @@
     <div class="flex-grow">
       <slot />
     </div>
-    <footer>
-      <div class="flex flex-col lg:flex-row items-center justify-between py-8">
-        <div class="mb-8 lg:mb-0">
+    <footer class="border-t border-primary">
+      <div
+        class="flex flex-col sm:flex-row sm:items-center justify-between py-8"
+      >
+        <div>
           <div>© {{ currentYear }}. All rights reserved.</div>
-          <div>
-            <a href="/rss.xml">RSS Feed</a> |
-            <a href="/sitemap.xml">Sitemap</a>
+          <div class="mt-1">
+            <a class="mr-2" href="/rss.xml">RSS Feed</a> |
+            <a class="ml-2" href="/sitemap.xml">Sitemap</a>
           </div>
         </div>
         <ul class="flex items-center">

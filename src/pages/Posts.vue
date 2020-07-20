@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="container mx-auto py-12">
+    <div class="max-w-4xl mx-auto py-12">
       <div
         class="border-b border-primary pb-2 flex justify-between items-center"
       >
@@ -8,16 +8,18 @@
         <Link url="/rss.xml">RSS</Link>
       </div>
       <section class="mt-6">
-        <div v-for="post in $page.posts.edges" :key="post.id" class="post   ">
-          <div class="flex justify-between items-center">
+        <div v-for="post in $page.posts.edges" :key="post.id" class="post">
+          <div
+            class="flex flex-col md:flex-row-reverse md:justify-between md:items-center mb-8 md:mb-0"
+          >
+            <div class="text-secondary">
+              <span>{{ post.node.date }}</span>
+            </div>
             <h2 class="text-2xl font-mono">
               <Link class="inline-block py-2" :url="post.node.path">{{
                 post.node.title
               }}</Link>
             </h2>
-            <div class="text-secondary">
-              <span>{{ post.node.date }}</span>
-            </div>
           </div>
         </div>
       </section>

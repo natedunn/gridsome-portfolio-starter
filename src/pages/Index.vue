@@ -2,7 +2,7 @@
   <Layout>
     <div>
       <div class="h-12"></div>
-      <section class="container">
+      <section class="max-w-4xl mx-auto">
         <g-image src="@/images/me-large.jpg" class="w-full" />
         <h1 class="font-mono inline-block mt-8">
           <Heading el="div">hello</Heading>
