@@ -91,7 +91,7 @@
 }
 
 /* Global */
-html::-webkit-scrollbar,
+/* html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   width: 20px;
 }
@@ -99,7 +99,7 @@ html,
 body {
   scrollbar-width: 20px;
   scrollbar-color: var(--color-scrollbar) var(--color-scrollbar-bg);
-}
+} */
 body {
   @apply font-sans;
   background-color: var(--bg-primary);

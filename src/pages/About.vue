@@ -17,8 +17,8 @@
           editing Myspace codes). Today I work with a wide range of stacks
           including
           <span class="font-bold">Wordpress</span>,
-          <span class="font-bold">Laravel</span>,
           <span class="font-bold">Vue</span>,
+          <span class="font-bold">Laravel</span>,
           <span class="font-bold">React</span>, and more. Additionally, I've
           spent a lot of time working with and authoring CSS frameworks.
         </p>
