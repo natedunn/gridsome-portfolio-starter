@@ -195,7 +195,7 @@ export default {
     Logo
   },
   mounted() {
-    this.theme = localStorage.getItem("theme") || "theme-light";
+    this.theme = localStorage.getItem("theme") || "theme-dark";
     document.documentElement.classList.add(this.theme);
   },
   data() {
