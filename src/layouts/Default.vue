@@ -72,7 +72,7 @@
         </div>
         <ul class="flex items-center">
           <li class="mr-8">
-            <a href="mailto:me@example.com">
+            <a href="mailto:hello@natedunn.net">
               <svg
                 width="25"
                 height="20"
@@ -88,26 +88,7 @@
           </li>
 
           <li class="mr-8">
-            <a href="https://youtube.com/drehimself" target="_blank">
-              <svg
-                width="26"
-                height="20"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M25.457 3.13c-.3-1.232-1.18-2.203-2.299-2.532C21.13 0 13 0 13 0S4.87 0 2.842.598c-1.119.33-2 1.3-2.299 2.531C0 5.362 0 10.02 0 10.02s0 4.658.543 6.891c.3 1.232 1.18 2.162 2.299 2.49C4.87 20 13 20 13 20s8.13 0 10.158-.598c1.119-.33 2-1.26 2.299-2.49C26 14.677 26 10.02 26 10.02s0-4.658-.543-6.89zM10.34 14.25V5.79l6.795 4.23-6.795 4.23z"
-                  fill-rule="nonzero"
-                />
-              </svg>
-            </a>
-          </li>
-
-          <li class="mr-8">
-            <a
-              href="https://github.com/drehimself/gridsome-portfolio-starter"
-              target="_blank"
-            >
+            <a href="https://github.com/natedunn" target="_blank">
               <svg
                 width="20"
                 height="19"
@@ -123,7 +104,7 @@
           </li>
 
           <li class="mr-8">
-            <a href="https://twitter.com/drehimself" target="_blank">
+            <a href="https://twitter.com/natedunn" target="_blank">
               <svg
                 width="20"
                 height="17"
@@ -139,7 +120,7 @@
           </li>
 
           <li>
-            <a href="https://instagram.com" target="_blank">
+            <a href="https://instagram.com/natedunn" target="_blank">
               <svg
                 width="20"
                 height="20"
