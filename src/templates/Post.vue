@@ -3,8 +3,19 @@
     <div class="max-w-4xl mx-auto py-16">
       <div class="border-b border-primary">
         <h1 class="text-4xl font-bold font-mono">{{ $page.post.title }}</h1>
-        <div class="text-xl text-gray-600 mb-4">{{ dateFormat }}</div>
+        <div class="flex items-center mt-2 mb-4">
+          <span class="inline-block mr-3 text-xl text-gray-600">{{
+            dateFormat
+          }}</span>
+          <div v-if="outOfDate">
+            <span
+              class="text-xs py-1 px-2 rounded bg-accent uppercase font-bold text-primary-invert"
+              >1+ Year(s) Old</span
+            >
+          </div>
+        </div>
       </div>
+
       <div class="h-12"></div>
       <div class="markdown-body mb-8" v-html="$page.post.content" />
       <div class="flex mb-8 text-sm tags">
@@ -115,6 +126,11 @@ export default {
     },
     pageTitle() {
       return this.$page.post.title ? this.$page.post.title : null;
+    },
+    outOfDate() {
+      const current = moment();
+      const date = moment(this.$page.post.date, "YYYY-MM-DD");
+      return current.diff(date, "days") > 365 ? true : false;
     },
     dateFormat() {
       return moment(this.$page.post.date, "YYYY-MM-DD").format("MMMM D, Y");
