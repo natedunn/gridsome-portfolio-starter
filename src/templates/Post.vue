@@ -1,8 +1,11 @@
 <template>
   <Layout>
     <div class="max-w-4xl mx-auto py-16">
-      <h1 class="text-4xl font-bold font-mono">{{ $page.post.title }}</h1>
-      <div class="text-xl text-gray-600 mb-4">{{ dateFormat }}</div>
+      <div class="border-b border-primary">
+        <h1 class="text-4xl font-bold font-mono">{{ $page.post.title }}</h1>
+        <div class="text-xl text-gray-600 mb-4">{{ dateFormat }}</div>
+      </div>
+      <div class="h-12"></div>
       <div class="markdown-body mb-8" v-html="$page.post.content" />
       <div class="flex mb-8 text-sm tags">
         <span class="inline-block mr-4">Filed under:</span>
