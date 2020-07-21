@@ -83,7 +83,7 @@ module.exports = {
   transformers: {
     remark: {
       plugins: [
-        ['gridsome-plugin-remark-shiki', { theme: 'nord', skipInline: true }]
+        ['gridsome-plugin-remark-shiki', { theme: 'zeit', skipInline: true }]
       ],
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
