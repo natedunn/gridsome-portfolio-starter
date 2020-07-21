@@ -5,7 +5,8 @@
         class="border-b border-primary pb-2 flex justify-between items-center"
       >
         <Heading el="h1">posts</Heading>
-        <Link url="/rss.xml">RSS</Link>
+        <a class="mr-2 is-underlined" href="/rss.xml">RSS Feed</a>
+        <!-- <Link url="rss.xml">RSS</Link> -->
       </div>
       <section class="mt-6">
         <div v-for="post in $page.posts.edges" :key="post.id" class="post">
