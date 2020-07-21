@@ -19,6 +19,7 @@ module.exports = {
   siteName: 'Nate Dunn (@natedunn)',
   siteDescription: 'Front-end web developer & designer',
   siteUrl: 'https://natedunn.net',
+  favicon: './src/images/favicon.png',
   pathPrefix: '/',
   plugins: [
     {
